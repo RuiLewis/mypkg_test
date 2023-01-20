@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.srv import Query
+from person_msgs.srv import Query
 
 def cb(request, response):
     if request.name == "Rui":
