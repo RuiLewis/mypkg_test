@@ -4,8 +4,7 @@ from std_msgs.msg import Int16
 
 rclpy.init()
 node = Node("talker")
-pub = node.create_service(Int16, "countup", 1)
-
+srv = node.create_service(Int16, "countup", 10)
 n = 0
 
 def cb():
@@ -17,5 +16,4 @@ def cb():
 
 node.create_timer(0.5, cb)
 rclpy.spin(node)
-
 
